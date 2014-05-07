@@ -31,6 +31,7 @@ ui/choqokmainwindow.cpp
 ui/uploadmediadialog.cpp
 ui/textbrowser.cpp
 ui/choqoktabbar.cpp
+ui/flickcharm.cpp
 )
 
 if(QtIndicate_FOUND)

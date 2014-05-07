@@ -23,6 +23,7 @@ along with this program; if not, see http://www.gnu.org/licenses/
 #include "timelinewidget.h"
 #include "account.h"
 #include "microblog.h"
+#include "flickcharm.h"
 #include <QVBoxLayout>
 #include <QScrollArea>
 #include <QScrollBar>
@@ -160,6 +161,8 @@ void TimelineWidget::setupUi()
     d->scrollArea->setObjectName("scrollArea");
     d->scrollArea->setFrameShape(QFrame::NoFrame);
     d->scrollArea->setWidgetResizable(true);
+    FlickCharm* flickcharm = new FlickCharm();
+    flickcharm->activateOn(d->scrollArea);
     scrollAreaWidgetContents = new QWidget();
     scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
     scrollAreaWidgetContents->setGeometry(QRect(0, 0, 254, 300));
@@ -170,7 +173,7 @@ void TimelineWidget::setupUi()
 
     d->mainLayout->addItem(verticalSpacer);
     d->mainLayout->setSpacing(5);
-    d->mainLayout->setMargin(1);
+    d->mainLayout->setContentsMargins(1,1,70,1);
 
     d->titleBarLayout = new QHBoxLayout;
     d->titleBarLayout->addWidget(d->lblDesc);

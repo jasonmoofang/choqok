@@ -31,6 +31,7 @@ along with this program; if not, see http://www.gnu.org/licenses/
 #include <qlayoutitem.h>
 #include "postwidget.h"
 #include <KDebug>
+#include <kstandarddirs.h>
 #include <QLabel>
 #include <KPushButton>
 #include <QPointer>
@@ -163,6 +164,8 @@ void TimelineWidget::setupUi()
     d->scrollArea->setWidgetResizable(true);
     FlickCharm* flickcharm = new FlickCharm();
     flickcharm->activateOn(d->scrollArea);
+    QString touchicon = KGlobal::dirs()->findResource( "data", "choqok/images/touch_icon.png" );
+    d->scrollArea->setStyleSheet("QScrollArea { background-image: url('" + touchicon + "');background-repeat:no-repeat;background-position:right; }");
     scrollAreaWidgetContents = new QWidget();
     scrollAreaWidgetContents->setObjectName("scrollAreaWidgetContents");
     scrollAreaWidgetContents->setGeometry(QRect(0, 0, 254, 300));

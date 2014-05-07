@@ -1,3 +1,10 @@
+**About This Branch
+===================
+This branch contains some additional hacks I wrote to make Choqok more touchscreen-friendly.
+Specifically it adds a strip of space next to the timeline widget that is touch-scrollable,
+so that one could scroll the timeline by dragging on the strip of space, while still
+retain the ability to drag-to-select in the postwidgets themselves.
+
     Choqok
 KDE Micro-Blogging client,
 Currently supports Identi.ca and Twitter.com
